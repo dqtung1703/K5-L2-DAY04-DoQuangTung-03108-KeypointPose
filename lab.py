@@ -545,7 +545,7 @@ def main():
     if sys.version_info < (3, 8):
         die("Cần Python 3.8 trở lên.")
     ap = argparse.ArgumentParser(description="Trợ lý Lab Ngày 4 trên CVAT cục bộ")
-    ap.add_argument("--url", default=os.environ.get("CVAT_URL", "http://localhost:8080"), help="địa chỉ CVAT (mặc định localhost:8080)")
+    ap.add_argument("--url", default=os.environ.get("CVAT_URL", "http://localhost:8090"), help="địa chỉ CVAT (mặc định localhost:8080)")
     sub = ap.add_subparsers(dest="cmd", required=True)
     c = sub.add_parser("check", help="kiểm và tự sửa CVAT")
     c.add_argument("--no-persist", action="store_true", help="chỉ sửa tạm, không ghi docker-compose.override.yml")
